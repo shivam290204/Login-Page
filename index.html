@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        .container {
+            display: flex;
+            width: 70%;
+            max-width: 900px;
+            height: 500px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .left {
+            flex: 1;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .left h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .left p {
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .right {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #6a11cb;
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+        }
+
+        .form-group-icon {
+            position: relative;
+        }
+
+        .form-group-icon input {
+            padding-left: 40px;
+        }
+
+        .form-group-icon i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: #2575fc;
+            transform: scale(1.05);
+        }
+
+        .extra-links {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        .extra-links a {
+            font-size: 0.9rem;
+            color: #6a11cb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .extra-links a:hover {
+            text-decoration: underline;
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Welcome Back!</h1>
+            <p>Access your account and explore the best we have to offer. If you don't have an account, feel free to sign up now!</p>
+        </div>
+        <div class="right">
+            <h2>Login</h2>
+            <div class="form-group form-group-icon">
+                <label for="email">Email Address</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group form-group-icon">
+                <label for="password">Password</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="button">Login</button>
+            <div class="extra-links">
+                <a href="#">Forgot Password?</a> | <a href="#">Create Account</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
